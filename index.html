@@ -9,12 +9,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
    <!-- google fonts -->
-  
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+   <style>
+    body{
+        font-family: "Lexend", serif;
+    }
+   </style>
    
   
      
 </head>
-<body class="Manrope">
+<body >
     <header class="container mx-auto bg-[#F9F7F3] ">
         <div class="navbar py-6 lg:px-32">
             <div class="navbar-start">
@@ -31,7 +39,7 @@
             <div class="navbar-end">
            <div class="flex gap-2">
             <img src="./images/coin.png" alt="">
-            <h1><span id="available-account-balance">5000</span>BDT</h1>
+            <h1><span id="available-account-balance">50000</span>BDT</h1>
            </div>
            
             </div>
@@ -55,13 +63,13 @@
                 <div class="space-y-6">
                     <div class="flex gap-2">
                         <img class="" src="./images/coin.png" alt="">
-                        <h3><span id="total-donation">0</span> BDT</h3>
+                        <h3><span id="total-donation-1">0</span> BDT</h3>
                     </div>
                     <h1>Donate for Flood at Noakhali, Bangladesh</h1>
                     <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-                     <div  class="w-full"> <input id="input-balance" type="text" placeholder="Type here" class="input input-bordered w-full text-center" /></div>
+                     <div  class="w-full"> <input id="input-balance-1" type="text" placeholder="Type here" class="input-donate-balance input input-bordered w-full text-start " /></div>
                     <div>
-                        <button id="donate-now-btn" class="btn w-full bg-[#B4F461]">Donate Now</button>
+                        <button onclick="calculateDonatedMoney()" id="donate-now-btn-1" class="btn w-full bg-[#B4F461]">Donate Now</button>
                     </div>
                 </div>
              </div> 
@@ -75,13 +83,13 @@
                 <div class="space-y-6">
                     <div class="flex gap-2">
                         <img class="" src="./images/coin.png" alt="">
-                        <h3><span>0</span> BDT</h3>
+                        <h3><span id="total-donation-2">0</span> BDT</h3>
                     </div>
                     <h1>Donate for Flood Relief in Feni,Bangladesh</h1>
                     <p>The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
-                     <div class="w-full"> <input type="text" placeholder="Type here" class="input input-bordered w-full text-center" /></div>
+                     <div class="w-full"> <input id="input-balance-2"  type="text" placeholder="Type here" class="input input-bordered w-full text-center" /></div>
                     <div>
-                        <button class="btn w-full bg-[#B4F461]">Donate Now</button>
+                        <button onclick="calculateDonatedMoney()" id="donate-now-btn-2" class="btn w-full bg-[#B4F461]">Donate Now</button>
                     </div>
                 </div>
              </div>
@@ -95,17 +103,35 @@
                 <div class="space-y-5">
                     <div class="flex gap-2">
                         <img class="" src="./images/coin.png" alt="">
-                        <h3><span>0</span> BDT</h3>
+                        <h3><span id="total-donation-3">0</span> BDT</h3>
                     </div>
                     <h1>Aid for Injured in the Quota Movement</h1>
                     <p>The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
-                     <div class="w-full"> <input type="text" placeholder="Type here" class="input input-bordered w-full text-center" /></div>
+                     <div class="w-full"> <input id="input-balance-3"  type="number" placeholder="Type here" class="input input-bordered w-full text-center" /></div>
                     <div>
-                        <button class="btn w-full bg-[#B4F461]">Donate Now</button>
+                        <button onclick="calculateDonatedMoney()" id="donate-now-btn-3" class="btn w-full bg-[#B4F461]">Donate Now</button>
                     </div>
                 </div>
              </div>
           </div>
+
+          <!-- modal -->
+           <!-- The button to open modal -->
+<div class="hidden">
+    <label for="my_modal_6" class="btn">open modal</label>
+
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="my_modal_6" class="modal-toggle" />
+<div class="modal" role="dialog">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">This modal works with a hidden checkbox!</p>
+    <div class="modal-action">
+      <label for="my_modal_6" class="btn">Close!</label>
+    </div>
+  </div>
+</div>
+</div>
 
       
     </main>
